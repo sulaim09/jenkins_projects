@@ -21,7 +21,7 @@ pipeline{
         stage("Deploy on Test"){
             steps{
                 // deploy on conatiner ---> pulgin
-                sh "deploy adapters: [tomcat9(path: '', url: 'http://54.80.60.47:8080//')], contextPath: 'app', war: '**/*.war'"
+                sh '''deploy adapters: [tomcat9(path: '', url: 'http://54.80.60.47:8080//')], contextPath: 'app', war: '**/*.war''''
                 echo "========Execution-===========..."
                
             }
